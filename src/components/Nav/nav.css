@@ -1,64 +1,89 @@
-.container {  
+.container {   
     display: grid;
-    grid-template-columns: 4fr 0fr 1fr;
-    grid-template-rows: 100px;
+    	grid-template-columns: repeat(7, 1fr);
+    	grid-template-rows: 100px 55px;
     gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "Craigslist Sign-Up Login";
-    background-color: #1976D2;
+    	grid-auto-flow: row;
+    	grid-template-areas:
+      "Craigslist . . . . Sign-Up Login"
+      "Community Services Forums Housing For-Sale Jobs Gigs";
 }
-.container div, .container button {
+.container.dark-blue {
+    background-color: #1976D2;
+    height: 100px;
+}
+*.light {
+    background-color:   #03A9F4;
+    height: 55px;
+}
+.container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-}
-.Craigslist {
-    grid-area: Craigslist;
-    font-size: 48px;
-    color: white;
-    display: flex;
-    align-self: center;
-    margin-left: 25px;
-}
-.Sign-Up { 
-    grid-area: Sign-Up;
     font-size: 24px;
-    color: #D0EAFF;
-    background-color: #1976D2;
     border: none;
-
-    position: relative;
-    display: flex;
-    align-self: center;
-
-    left: 150%;
-    width: 120px;
-    height: 55px;
-    border-radius: 10px;
-    font-size: 24px;
-
-    align-items: center;
-    justify-content: center;
-
 }
-.Login { 
-    grid-area: Login;
+  
+.Craigslist {
+	grid-area: Craigslist;
+    font-size: 48px !important;
+    color: white;
+    background-color: inherit;
+}
+.Community {
+	grid-area: Community;
+}
+.Services {
+	grid-area: Services;
+}
+.Forums {
+	grid-area: Forums;
+}
+.Housing {
+	grid-area: Housing;
+}
+.For-Sale {
+	grid-area: For-Sale;
+}
+.Jobs {
+	grid-area: Jobs;
+}
+.Gigs {
+	grid-area: Gigs;
+}
+.Login {
+	grid-area: Login;
     position: relative;
+
+    left: 25%;
     display: flex;
-    border: 0;
-    outline: 0;
-
-
-    left: 50%;
-    top: 25%;
-    width: 120px;
-    height: 55px;
-    border-radius: 10px;
-    font-size: 24px;
-
-    align-items: center;
     justify-content: center;
-    color: #212121;
+    align-self: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    width: 120px;
+    height: 60px;
     background-color: #5CB7FF;
-    box-shadow: 4px 4px 4px rgba(0,0,0, 0.25)
+}
+.Sign-Up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+	grid-area: Sign-Up;
+    position: relative;
+    left: 50%;
+    color: #D0EAFF;
+    background-color: inherit;
+    width: 150px;
+    height: 55px;
+    padding: 15px;
+}
+
+
+.container button:hover {
+    background-color: #005780;
+    color: white;
 }
