@@ -1,27 +1,64 @@
-#top-nav {
+.container {  
     display: grid;
-    height: 100px;
+    grid-template-columns: 4fr 0fr 1fr;
+    grid-template-rows: 100px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Craigslist Sign-Up Login";
     background-color: #1976D2;
 }
-#logo {
+.container div, .container button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+.Craigslist {
+    grid-area: Craigslist;
     font-size: 48px;
     color: white;
-}
-#bottom-nav {
     display: flex;
-    height: 55px;
-    background-color: #03A9F4;
+    align-self: center;
+    margin-left: 25px;
 }
-#bottom-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
+.Sign-Up { 
+    grid-area: Sign-Up;
+    font-size: 24px;
+    color: #D0EAFF;
+    background-color: #1976D2;
+    border: none;
 
-ul {
-    text-decoration: none;
-    list-style-type: none;
+    position: relative;
+    display: flex;
+    align-self: center;
+
+    left: 150%;
+    width: 120px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    align-items: center;
+    justify-content: center;
+
 }
-li {
-    color: black;
+.Login { 
+    grid-area: Login;
+    position: relative;
+    display: flex;
+    border: 0;
+    outline: 0;
+
+
+    left: 50%;
+    top: 25%;
+    width: 120px;
+    height: 55px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    align-items: center;
+    justify-content: center;
+    color: #212121;
+    background-color: #5CB7FF;
+    box-shadow: 4px 4px 4px rgba(0,0,0, 0.25)
 }
