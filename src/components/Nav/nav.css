@@ -1,0 +1,27 @@
+#top-nav {
+    display: grid;
+    height: 100px;
+    background-color: #1976D2;
+}
+#logo {
+    font-size: 48px;
+    color: white;
+}
+#bottom-nav {
+    display: flex;
+    height: 55px;
+    background-color: #03A9F4;
+}
+#bottom-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+li {
+    color: black;
+}
